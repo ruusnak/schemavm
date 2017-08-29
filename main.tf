@@ -37,5 +37,5 @@ variable datacenter {
 # Outputs
 ##############################################################################
 output "VM_id" {
-  value = "${ibmcloud_infra_virtual_guest.id}"
+  value = "${ibm_compute_vm_instance.id}"
 }
