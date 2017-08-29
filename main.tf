@@ -10,7 +10,6 @@ resource "ibm_compute_vm_instance" "terraform-sample-ruusnak" {
    hostname = "terraform-sample-ruusnak"
    domain = "jr.example.com"
    datacenter = "ams01"
-   public_network_speed = 10
    hourly_billing = false
    cores = 1
    memory = 1024
