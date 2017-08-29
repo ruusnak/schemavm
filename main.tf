@@ -36,6 +36,6 @@ variable datacenter {
 ##############################################################################
 # Outputs
 ##############################################################################
-output "VM_id" {
-  value = "${ibm_compute_vm_instance.id}"
-}
+# output "VM_id" {
+#   value = "${ibm_compute_vm_instance.id}"
+# }
