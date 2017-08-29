@@ -6,18 +6,15 @@ provider "ibm" {
 
 # Create a new virtual guest using image "Debian"
 # Your VM will appear with hostname starting with "terraformed-"
-resource "ibmcloud_infra_virtual_guest" "debian_small_virtual_guest" {
-  os_reference_code        = "DEBIAN_7_64"
-  domain                   = "myapp.ibm.com"
-  datacenter               = "${var.datacenter}"
-  network_speed            = 100
-  hourly_billing           = true
-  private_network_only     = true
-  cores                    = 1
-  memory                   = 1024
-  disks                    = [25, 10, 20]
-  user_metadata            = "{\"value\":\"newvalue\"}"
-  local_disk               = false
+resource "ibm_compute_vm_instance" "terraform-sample-ruusnak" {
+   hostname = "terraform-sample-ruusnak"
+   domain = "jr.example.com"
+   datacenter = "ams01"
+   public_network_speed = 10
+   hourly_billing = false
+   cores = 1
+   memory = 1024
+   local_disk = false
 }
 
 ##############################################################################
