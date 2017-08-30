@@ -7,13 +7,14 @@ provider "ibm" {
 # Create a new virtual guest using image "Debian"
 # Your VM will appear with hostname starting with "terraformed-"
 resource "ibm_compute_vm_instance" "terraform-sample-ruusnak" {
-   hostname = "terraform-sample-ruusnak"
-   domain = "jr.example.com"
-   datacenter = "ams01"
-   hourly_billing = false
-   cores = 1
-   memory = 1024
-   local_disk = false
+  hostname = "terraform-sample-ruusnak"
+  domain = "jr.example.com"
+  os_reference_code = "CENTOS_7_64"
+  datacenter = "ams01"
+  hourly_billing = false
+  cores = 1
+  memory = 1024
+  local_disk = false
 }
 
 ##############################################################################
